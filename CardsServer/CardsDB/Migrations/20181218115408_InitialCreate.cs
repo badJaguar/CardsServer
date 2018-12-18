@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CardsServer.Migrations
+namespace CardsServer.CardsDB.Migrations
 {
     public partial class InitialCreate : Migration
     {

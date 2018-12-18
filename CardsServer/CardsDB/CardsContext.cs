@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CardsServer.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CardsServer
+namespace CardsServer.CardsDB
 {
     public class CardsContext : DbContext
     {
