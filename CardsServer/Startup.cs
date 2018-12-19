@@ -25,12 +25,12 @@ namespace CardsServer
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            var connection = @"Data Source=GREEN5\SQLEXPRESS;Initial Catalog=CardDatabase;Integrated Security=True;";
+            const string connection = @"Data Source=GREEN5\SQLEXPRESS;Initial Catalog=CardDatabase;Integrated Security=True;";
+
             services.AddDbContext<CardsContext>
                 (options => options.UseSqlServer(connection));
 
@@ -46,17 +46,12 @@ namespace CardsServer
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
-            {
                 app.UseDeveloperExceptionPage();
-            }
             else
-            {
                 app.UseHsts();
-            }
 
             app.UseHttpsRedirection();
             app.UseMvc();
