@@ -11,11 +11,11 @@ namespace CardsServer.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ProductsController : Controller
     {
         private readonly CardsContext _context;
 
-        public ValuesController(CardsContext context)
+        public ProductsController(CardsContext context)
         {
             _context = context;
         }
